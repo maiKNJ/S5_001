@@ -24,7 +24,7 @@ public class MakeBall : MonoBehaviour {
 			ball.transform.rotation = SpawnPoint.transform.rotation;
 			float xPos = Random.Range(-5f, 5f);
 			float zPos = Random.Range(-5f, 5f);
-			ball.transform.position = SpawnPoint.transform.position + xPos * Vector3.right + zPos * Vector3.forward;
+			//ball.transform.position = SpawnPoint.transform.position + xPos * Vector3.right + zPos * Vector3.forward;
 			ball.SetActive(true);
 		}
 

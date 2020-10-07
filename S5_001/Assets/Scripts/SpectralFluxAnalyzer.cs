@@ -77,6 +77,7 @@ public class SpectralFluxAnalyzer
 				spectralFluxSamples[indexToDetectPeak].isPeak = true;
 				Debug.Log("peak" + curInfo.spectralFlux);
 				Debug.Log(indexToDetectPeak);
+				Debug.Log("rectified flux" + calculateRectifiedSpectralFlux());
 			}
 			indexToProcess++;
 		}
@@ -86,7 +87,7 @@ public class SpectralFluxAnalyzer
 		}
 	}
 
-	float calculateRectifiedSpectralFlux()
+	public float calculateRectifiedSpectralFlux()
 	{
 		float sum = 0f;
 

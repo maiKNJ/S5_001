@@ -516,7 +516,7 @@ MonoBehaviour:
   minThreshold: 0
   frequency: 0
   audioSampleRate: 44100
-  microphone: 
+  microphone: Realtek(R)Audio
   fftWindow: 5
   micDropdown: {fileID: 0}
   thresholdSlider: {fileID: 0}
@@ -543,12 +543,13 @@ AudioSource:
   m_GameObject: {fileID: 1468514061}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: affbeb663ef62e740b1a6a5df361e1d3,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -49,13 +49,13 @@ public class AudioVisualizer : MonoBehaviour
                 audioObject.localScale = newScale;
             }*/
 
-        //if( info.spectralFlux > 1.0)
-        //{
+        if( realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.5)
+        {
             float intensity = spectrum[0] * 250;
             float lerpY = Mathf.Lerp(audioObject.localScale.y, intensity, 1);
             Vector3 newScale = new Vector3(audioObject.localScale.x, lerpY, audioObject.localScale.z);
             audioObject.localScale = newScale;
-        //}
+        }
         
 
         //}

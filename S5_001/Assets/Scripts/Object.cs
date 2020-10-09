@@ -10,6 +10,12 @@ public class Object : MonoBehaviour, IPooledObject
     public float range1 = -1f;
     public float range2 = 1f;
     public float speed = 1;
+    public GameObject orbit;
+    //public string tag;
+
+    public Transform Center;
+    public Vector3 Axis = new Vector3(0, 1, 0);
+
     // Start is called before the first frame update
     public void OnObjectSpawn()
     {
@@ -31,7 +37,15 @@ public class Object : MonoBehaviour, IPooledObject
         transform.position += direction * speed * Time.deltaTime;
 
         //MISSING SPEED CONTROL!
+
+        
     }
 
-
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject == orbit) 
+        {
+            transform.RotateAround(Center.position, Axis, 80 * Time.deltaTime);
+        }
+    }
 }

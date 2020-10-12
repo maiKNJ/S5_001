@@ -43,6 +43,7 @@ public class Object : MonoBehaviour, IPooledObject
 
     void OnCollisionEnter(Collision col)
     {
+       
         if (col.gameObject == orbit) 
         {
             transform.RotateAround(Center.position, Axis, 80 * Time.deltaTime);

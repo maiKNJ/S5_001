@@ -11,15 +11,15 @@ public class object_spawner : MonoBehaviour
     AudioSource audioSource;
     public FFTWindow FFTWindow;
 
-    public Collider IgnoreCollision;
-    public Collider objectForCollision;
+   // public Collider IgnoreCollision;
+    //public Collider objectForCollision;
     void Start()
     {
         poolManager = PoolManager.Instance;
         audioSource = GetComponent<AudioSource>();
         realTimeSpectralFluxAnalyzer = new SpectralFluxAnalyzer();
 
-        Physics.IgnoreCollision(objectForCollision, IgnoreCollision, true);
+     //   Physics.IgnoreCollision(IgnoreCollision, objectForCollision, true);
     }
 
     void FixedUpdate()

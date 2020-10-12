@@ -126,6 +126,6 @@ MonoBehaviour:
   range1: -1
   range2: 1
   speed: 4
-  orbit: {fileID: 7796234682272874320, guid: b5401f2467f327741a39b6f11faf1033, type: 3}
+  orbit: {fileID: 5178117580944081119, guid: 5c024d72b75b7024cade206c5739e3dc, type: 3}
   Center: {fileID: 6193449371770048149, guid: bfb1e6f50d1387f49bf57d0725f10185, type: 3}
   Axis: {x: 0, y: 1, z: 0}

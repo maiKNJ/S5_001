@@ -10,11 +10,16 @@ public class object_spawner : MonoBehaviour
     SpectralFluxAnalyzer realTimeSpectralFluxAnalyzer;
     AudioSource audioSource;
     public FFTWindow FFTWindow;
+
+    public Collider IgnoreCollision;
+    public Collider objectForCollision;
     void Start()
     {
         poolManager = PoolManager.Instance;
         audioSource = GetComponent<AudioSource>();
         realTimeSpectralFluxAnalyzer = new SpectralFluxAnalyzer();
+
+        Physics.IgnoreCollision(objectForCollision, IgnoreCollision, true);
     }
 
     void FixedUpdate()
@@ -30,5 +35,10 @@ public class object_spawner : MonoBehaviour
             Debug.Log("check " + realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux());
             poolManager.spawnFromPool("Cube", transform.position, Quaternion.identity);
         }
+        if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+        {
+            poolManager.spawnFromPool("Second", transform.position, Quaternion.identity);
+        }
+
     }
 }

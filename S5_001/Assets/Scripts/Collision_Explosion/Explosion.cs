@@ -11,6 +11,8 @@ public class Explosion : MonoBehaviour
     public float maxForce;
     public float radius;
 
+    public GameObject originalObject;
+
 
     public void Explode()
     {
@@ -31,5 +33,18 @@ public class Explosion : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            if (originalObject != null)
+            {
+                originalObject.GetComponent<Explosion>().Explode();
+                Destroy(originalObject);
 
+            }
+        }
+
+
+    }
 }

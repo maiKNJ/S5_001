@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 [RequireComponent(typeof(AudioSource))]
-[RequireComponent(typeof(Microphone))]
+//[RequireComponent(typeof(Microphone))]
 public class MicrophoneInput : MonoBehaviour
 {
 	public float minThreshold = 0;
@@ -15,7 +15,7 @@ public class MicrophoneInput : MonoBehaviour
 	public string microphone;
 	public FFTWindow fftWindow;
 	public Dropdown micDropdown;
-	public Slider thresholdSlider;
+	//public Slider thresholdSlider;
 
 	private List<string> options = new List<string>();
 	private int samples = 8192;
@@ -42,12 +42,12 @@ public class MicrophoneInput : MonoBehaviour
 		minThreshold = PlayerPrefsManager.GetThreshold();
 
 		//add mics to dropdown
-		/*micDropdown.AddOptions(options);
+		micDropdown.AddOptions(options);
 		micDropdown.onValueChanged.AddListener(delegate {
 			micDropdownValueChangedHandler(micDropdown);
 		});
 
-		thresholdSlider.onValueChanged.AddListener(delegate {
+		/*thresholdSlider.onValueChanged.AddListener(delegate {
 			thresholdValueChangedHandler(thresholdSlider);
 		});*/
 		//initialize input with default mic
@@ -83,16 +83,16 @@ public class MicrophoneInput : MonoBehaviour
 	}
 
 
-	/*public void micDropdownValueChangedHandler(Dropdown mic)
+	public void micDropdownValueChangedHandler(Dropdown mic)
 	{
 		microphone = options[mic.value];
 		UpdateMicrophone();
-	}*/
+	}
 
-	public void thresholdValueChangedHandler(Slider thresholdSlider)
+	/*public void thresholdValueChangedHandler(Slider thresholdSlider)
 	{
 		minThreshold = thresholdSlider.value;
-	}
+	}*/
 
 	public float GetAveragedVolume()
 	{

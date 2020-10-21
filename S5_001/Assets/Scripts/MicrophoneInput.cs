@@ -42,7 +42,7 @@ public class MicrophoneInput : MonoBehaviour
 		minThreshold = PlayerPrefsManager.GetThreshold();
 
 		//add mics to dropdown
-		micDropdown.AddOptions(options);
+		/*micDropdown.AddOptions(options);
 		micDropdown.onValueChanged.AddListener(delegate {
 			micDropdownValueChangedHandler(micDropdown);
 		});
@@ -83,7 +83,7 @@ public class MicrophoneInput : MonoBehaviour
 	}
 
 
-	public void micDropdownValueChangedHandler(Dropdown mic)
+	/*public void micDropdownValueChangedHandler(Dropdown mic)
 	{
 		microphone = options[mic.value];
 		UpdateMicrophone();

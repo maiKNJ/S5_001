@@ -543,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174319031}
   m_LocalRotation: {x: -0.08120226, y: -0.020333992, z: 0.0016578517, w: -0.9964888}
-  m_LocalPosition: {x: -1.1, y: 11.1, z: -40.6}
+  m_LocalPosition: {x: 1.0408337, y: 9.4906025, z: -17.945219}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -580,8 +580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f81c56f3d4f18498a34ccf04b09be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolManager: {fileID: 0}
-  audioSource: {fileID: 0}
   FFTWindow: 5
 --- !u!4 &180808502
 Transform:
@@ -712,9 +710,6 @@ MonoBehaviour:
   microphone: 
   fftWindow: 5
   micDropdown: {fileID: 244658206}
-  options: []
-  samples: 8192
-  audioSource: {fileID: 0}
 --- !u!1 &216135972
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,75 +918,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244658204}
   m_CullTransparentMesh: 0
---- !u!1001 &346026368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644485, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3479968885072644486, guid: 99128a6cf95cd11488e0439816b048f0,
-        type: 3}
-      propertyPath: m_Name
-      value: Dome Stream Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 99128a6cf95cd11488e0439816b048f0, type: 3}
 --- !u!1 &450732122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1171,6 @@ MonoBehaviour:
   microphone: {fileID: 244658206}
   settingsPanel: {fileID: 2146475996}
   openButton: {fileID: 787589199}
-  panelActive: 0
 --- !u!4 &597310312
 Transform:
   m_ObjectHideFlags: 0
@@ -1388,7 +1313,6 @@ MonoBehaviour:
   microphone: {fileID: 244658206}
   settingsPanel: {fileID: 2146475996}
   openButton: {fileID: 787589199}
-  panelActive: 0
 --- !u!114 &694072428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2177,8 +2101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c138cd967eef4e4aac4fc2c76dca1e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webCam: {fileID: 0}
-  whitePixels: 0
 --- !u!4 &1203590541
 Transform:
   m_ObjectHideFlags: 0
@@ -2364,9 +2286,6 @@ MonoBehaviour:
   microphone: 
   fftWindow: 5
   micDropdown: {fileID: 244658206}
-  options: []
-  samples: 8192
-  audioSource: {fileID: 0}
 --- !u!114 &1468514063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,7 +2301,6 @@ MonoBehaviour:
   audioObject: {fileID: 445081840890660056, guid: 5f3b439a5c752f6489297a72d7b87823,
     type: 3}
   FFTWindow: 5
-  audioSource: {fileID: 0}
 --- !u!82 &1468514064
 AudioSource:
   m_ObjectHideFlags: 0

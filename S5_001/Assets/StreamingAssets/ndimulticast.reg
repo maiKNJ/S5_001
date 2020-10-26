@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\NDI\Multicast\Send]
+"Mode"=dword:00000001
+"NetMask"="255.255.255.0"
+"NetPrefix"="239.255.10.0"
+

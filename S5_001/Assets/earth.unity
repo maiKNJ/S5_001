@@ -151,11 +151,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pools:
-  - tag: Cube
+  - tag: FirstOrbit
     prefab: {fileID: 6095852555684197494, guid: 1fc2ad6da6b9e5545b42052ed772303b,
       type: 3}
     size: 0
-  - tag: Second
+  - tag: SecondOrbit
     prefab: {fileID: 445081840890660036, guid: 5f3b439a5c752f6489297a72d7b87823, type: 3}
     size: 50
 --- !u!4 &29773357

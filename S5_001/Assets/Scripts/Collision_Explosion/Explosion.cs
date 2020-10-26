@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+    
     public GameObject explosion;
     public Vector3 explosionOffset;
 
@@ -35,16 +36,28 @@ public class Explosion : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
             if (originalObject != null)
             {
                 originalObject.GetComponent<Explosion>().Explode();
-                Destroy(originalObject);
+                originalObject.SetActive(false);
 
             }
+        }*/
+
+
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Finish") {
+
+                if (originalObject != null)
+                {
+                    originalObject.GetComponent<Explosion>().Explode();
+                    originalObject.SetActive(false);
+                }
         }
-
-
     }
 }

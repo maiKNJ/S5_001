@@ -33,11 +33,11 @@ public class object_spawner : MonoBehaviour
         if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.02 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.04)
         {
             Debug.Log("check " + realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux());
-            poolManager.spawnFromPool("Cube", transform.position, Quaternion.identity);
+            poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
         }
         if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
         {
-            poolManager.spawnFromPool("Second", transform.position, Quaternion.identity);
+            poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
         }
 
     }

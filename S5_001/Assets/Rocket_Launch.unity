@@ -158,7 +158,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 329048006}
+  m_LookAt: {fileID: 3339582094797018453}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
@@ -182,8 +182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22831545}
-  m_LocalRotation: {x: 0.4097621, y: 0.016388198, z: -0.0073631024, w: 0.9120155}
-  m_LocalPosition: {x: 5.411438, y: 11.061161, z: -38.993095}
+  m_LocalRotation: {x: 0.36691496, y: 0.004031032, z: -0.0015899531, w: 0.93024445}
+  m_LocalPosition: {x: 7.7453995, y: -1.485939, z: -0.935318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2110986227}
@@ -322,7 +322,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &329048002
 Animator:
   serializedVersion: 3
@@ -690,8 +690,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775645828}
-  m_LocalRotation: {x: 0.4097621, y: 0.016388198, z: -0.0073631024, w: 0.9120155}
-  m_LocalPosition: {x: -104.309296, y: -17.537645, z: 70.19891}
+  m_LocalRotation: {x: 0.40146446, y: 0.0063437074, z: -0.0027807823, w: 0.93024445}
+  m_LocalPosition: {x: -104.3093, y: -16.84469, z: 70.19891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -737,6 +737,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6193449371736950834, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6193449371770048137, guid: bfb1e6f50d1387f49bf57d0725f10185,
         type: 3}
       propertyPath: m_Name
@@ -1044,7 +1049,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 329048006}
+  m_Follow: {fileID: 3339582094797018453}
   m_AnimatedTarget: {fileID: 329048002}
   m_LayerIndex: 0
   m_ShowDebugText: 0

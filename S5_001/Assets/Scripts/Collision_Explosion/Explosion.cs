@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 public class Explosion : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class Explosion : MonoBehaviour
     public float radius;
 
     public GameObject originalObject;
+
+
 
 
     public void Explode()
@@ -45,13 +49,16 @@ public class Explosion : MonoBehaviour
 
             }
         }*/
-
+        
 
     }
 
     void OnCollisionEnter(Collision col)
     {
+        //collisions += 1;
+        //Debug.Log("collsions" + collisions);
         if (col.gameObject.tag == "Finish") {
+            
 
                 if (originalObject != null)
                 {

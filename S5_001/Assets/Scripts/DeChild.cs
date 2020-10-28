@@ -11,8 +11,12 @@ public class DeChild : MonoBehaviour
     //public GameObject child1;
     //public GameObject child2;
     //public GameObject child3;
-    public Vector3 childV;
-    
+    //public Vector3 childV;
+    public Transform newparent;
+    public Vector3 r;
+    public Transform Center;
+    public Vector3 Axis = new Vector3(0, 1, 0);
+
 
 
     // Start is called before the first frame update
@@ -29,11 +33,14 @@ public class DeChild : MonoBehaviour
         //Vector3 child1V = transform.TransformPoint(childV);
         Debug.Log(Time.frameCount);
         //childV = child.transform.position;
-        if (Time.frameCount > 120)
+        if (Time.frameCount > 107)
         {
             
-            child.transform.parent = null;
-            child.transform.position = childV;
+            //child.transform.parent = null;
+            child.transform.SetParent(newparent);
+            transform.Rotate(r);
+            //child.transform.position = childV;
+            newparent.transform.RotateAround(Center.position, Axis, Random.Range(3 * Time.deltaTime, 4 * Time.deltaTime));
 
             //child1.transform.parent = null;
 

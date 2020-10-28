@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,9 @@ public class TimeSceneChange : MonoBehaviour
 
     private float timer = 0.0f;
     private float waitTime = 9000;
+
+    public Animator transistion;
+    public float transTime = 1f;
     void Start()
     {
         Application.targetFrameRate = 30;
@@ -25,8 +29,26 @@ public class TimeSceneChange : MonoBehaviour
         if (timer >= waitTime)
         {
             Debug.Log("inside 5 collsions");
-            SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+            NewScene();
+            
         }
 
+    }
+
+    public void NewScene()
+    {
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene()
+    {
+        //Play animation
+        transistion.SetTrigger("start");
+
+        //Wait
+        yield return new WaitForSeconds(transTime);
+
+        //New scene
+        SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
     }
 }

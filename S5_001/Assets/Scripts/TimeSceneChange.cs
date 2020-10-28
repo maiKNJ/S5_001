@@ -29,26 +29,31 @@ public class TimeSceneChange : MonoBehaviour
         if (timer >= waitTime)
         {
             Debug.Log("inside 5 collsions");
-            NewScene();
-            
+            //NewScene();
+            LoadScene();
         }
 
     }
 
     public void NewScene()
     {
-        StartCoroutine(LoadScene());
+       // StartCoroutine(LoadScene());
     }
 
-    IEnumerator LoadScene()
+    public void LoadScene()
     {
         //Play animation
         transistion.SetTrigger("start");
 
         //Wait
-        yield return new WaitForSeconds(transTime);
+        //yield return new WaitForSeconds(transTime);
 
         //New scene
+        //SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+    }
+
+    public void complete()
+    {
         SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
     }
 }

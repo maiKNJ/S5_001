@@ -11,6 +11,8 @@ public class DeChild2 : MonoBehaviour
     public List<GameObject> Core;
     public List<Transform> newparentCore;
     public Vector3 rotation;
+    public Rigidbody Sputnik;
+    public GameObject sput;
 
     public Transform Earth;
     public Vector3 Axis = new Vector3(0, 1, 0);
@@ -24,7 +26,7 @@ public class DeChild2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount > 140)
+        if (Time.frameCount > 163)
         {
             Boosters[0].transform.SetParent(newparentBoosters[0]);
             Boosters[1].transform.SetParent(newparentBoosters[1]);
@@ -56,6 +58,12 @@ public class DeChild2 : MonoBehaviour
                 Core[i].transform.Rotate(rotation);
                 newparentCore[i].transform.RotateAround(Earth.position, Axis, Random.Range(3 * Time.deltaTime, 4 * Time.deltaTime));
             }
+        }
+
+        if (Time.frameCount > 500)
+        {
+            Sputnik.useGravity = true;
+            sput.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
         }
     }
 }

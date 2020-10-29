@@ -24,6 +24,7 @@ public class object_spawner : MonoBehaviour
         //   Physics.IgnoreCollision(IgnoreCollision, objectForCollision, true);
     }
 
+
     void FixedUpdate()
     {
         float[] spectrum = new float[1024];
@@ -51,6 +52,7 @@ public class object_spawner : MonoBehaviour
             if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
             {
                 poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, Quaternion.identity);
+
             }
         }
     }

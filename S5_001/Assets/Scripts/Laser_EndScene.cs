@@ -11,9 +11,12 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
    
     public void OnObjectSpawn()
     {
-        Quaternion dir = LaserBeamOrigin.transform.rotation;
-        Debug.Log("direction: " + dir);
-        Vector3 direction = new Vector3(-1f, 0, 0).normalized;
+        //Quaternion dir = LaserBeamOrigin.transform.rotation;
+        //Debug.Log("direction: " + dir);
+        float euler_z = LaserBeamOrigin.transform.eulerAngles.z;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, euler_z);
+
+        Vector3 direction = new Vector3(-1+transform.eulerAngles.z, 0, 0).normalized;
         transform.position += direction * speed * Time.deltaTime;
         //transform.rotation = dir;
         

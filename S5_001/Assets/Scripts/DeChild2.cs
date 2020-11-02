@@ -16,6 +16,10 @@ public class DeChild2 : MonoBehaviour
 
     public Transform Earth;
     public Vector3 Axis = new Vector3(0, 1, 0);
+    public float BoosterOff = 80;
+    public float CoreOff = 180;
+    public float InCoreOff = 200;
+    public float SputFall = 350;
 
 
     // Start is called before the first frame update
@@ -26,7 +30,7 @@ public class DeChild2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.frameCount > 163)
+        if (Time.frameCount > BoosterOff)
         {
             Boosters[0].transform.SetParent(newparentBoosters[0]);
             Boosters[1].transform.SetParent(newparentBoosters[1]);
@@ -40,7 +44,7 @@ public class DeChild2 : MonoBehaviour
             }
         }
 
-        if (Time.frameCount > 180)
+        if (Time.frameCount > CoreOff)
         {
             Corestage.transform.SetParent(newparentCorestage);
             Corestage.transform.Rotate(rotation);
@@ -48,7 +52,7 @@ public class DeChild2 : MonoBehaviour
 
         }
 
-        if (Time.frameCount > 200)
+        if (Time.frameCount > InCoreOff)
         {
             Core[0].transform.SetParent(newparentCore[0]);
             Core[1].transform.SetParent(newparentCore[1]);
@@ -60,7 +64,7 @@ public class DeChild2 : MonoBehaviour
             }
         }
 
-        if (Time.frameCount > 500)
+        if (Time.frameCount > SputFall)
         {
             Sputnik.useGravity = true;
             sput.GetComponent<Renderer>().material.SetColor("_Color", Color.red);

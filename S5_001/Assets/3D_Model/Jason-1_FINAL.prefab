@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5230174087704483660}
   - component: {fileID: 1658565663223455587}
   - component: {fileID: 1878898795706347546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Dark Gold Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 2833567379551438929}
   - component: {fileID: 1606463698744838246}
   - component: {fileID: 7415372501850380507}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Solar Panels]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4481161371797338042}
   - component: {fileID: 3748708994879223610}
   - component: {fileID: 5656662646044424939}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [White Surfaces_Smooth]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 4307584070910860910}
   - component: {fileID: 3409557614392274207}
   - component: {fileID: 3167558240814294620}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Steel Panels]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 783012627802744467}
   - component: {fileID: 8496170680785748195}
   - component: {fileID: 4688645955932094186}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Light Grey Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 5160077596834710071}
   - component: {fileID: 6528918518889966000}
   - component: {fileID: 4959735204762141198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Grey Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 2683733411471918645}
   - component: {fileID: 4338100932708428782}
   - component: {fileID: 2917099188490899129}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Foil Color Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,7 +585,8 @@ GameObject:
   - component: {fileID: -1637681899885958348}
   - component: {fileID: -465391392117673026}
   - component: {fileID: -740135525877132013}
-  m_Layer: 0
+  - component: {fileID: 101282934286930528}
+  m_Layer: 9
   m_Name: Jason-1_FINAL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -614,6 +615,7 @@ Transform:
   - {fileID: 4307584070910860910}
   - {fileID: 919537696563273565}
   - {fileID: 4481161371797338042}
+  - {fileID: 2124852996851869760}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -669,7 +671,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4375790928613461990, guid: fc33e8a3488972b41a93ff3598ec0ec4, type: 3}
+  m_Mesh: {fileID: -1565742571895394118, guid: fc33e8a3488972b41a93ff3598ec0ec4, type: 3}
 --- !u!54 &-465391392117673026
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -700,10 +702,115 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range1: -1
   range2: 1
-  speed: 4
+  speed: 2
   orbit: {fileID: 7796234682272874320, guid: b5401f2467f327741a39b6f11faf1033, type: 3}
   Center: {fileID: 6193449371770048149, guid: bfb1e6f50d1387f49bf57d0725f10185, type: 3}
   Axis: {x: 0, y: 1, z: 0}
+--- !u!65 &101282934286930528
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6095852555684197494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6739371271402308446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2124852996851869760}
+  - component: {fileID: 600948116351827911}
+  m_Layer: 9
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124852996851869760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739371271402308446}
+  m_LocalRotation: {x: 0.16723797, y: -0.0035472217, z: -0.020907016, w: 0.9856885}
+  m_LocalPosition: {x: -1, y: -25, z: 20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6904863988115762892}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 19.241001, y: -0.84900004, z: -2.5740001}
+--- !u!108 &600948116351827911
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6739371271402308446}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.09782846, g: 0.6981132, b: 0.02963687, a: 1}
+  m_Intensity: 1.92
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &8496220311508577572
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +822,7 @@ GameObject:
   - component: {fileID: 919537696563273565}
   - component: {fileID: 617222320803958577}
   - component: {fileID: 2360823032906447563}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [White Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +905,7 @@ GameObject:
   - component: {fileID: 483153670577335563}
   - component: {fileID: 6923623516717396758}
   - component: {fileID: 4771137056852075597}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Black Surfaces]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -881,7 +988,7 @@ GameObject:
   - component: {fileID: 2282301061175080806}
   - component: {fileID: 4673513265676270507}
   - component: {fileID: 7292520382157262307}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Main Body_Foil]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +1068,7 @@ GameObject:
   - component: {fileID: 8921100337385970833}
   - component: {fileID: 6320875695946920578}
   - component: {fileID: 8251822932858151946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jason-1_vFINAL [Dark Grey]
   m_TagString: Untagged
   m_Icon: {fileID: 0}

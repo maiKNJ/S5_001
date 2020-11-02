@@ -34,7 +34,7 @@ public class Object : MonoBehaviour, IPooledObject
         //transform.GetComponent<Rigidbody>().velocity = direction * speed;
 
         //transform.GetComponent<Rigidbody>().velocity = newVelocity;
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += direction * speed * (Time.deltaTime/4);
 
         //MISSING SPEED CONTROL!
 

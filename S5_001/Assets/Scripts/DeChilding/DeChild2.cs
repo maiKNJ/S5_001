@@ -64,10 +64,10 @@ public class DeChild2 : MonoBehaviour
             }
         }
 
-        if (Time.frameCount > SputFall)
+        /*if (Time.frameCount > SputFall)
         {
             Sputnik.useGravity = true;
             sput.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-        }
+        }*/
     }
 }

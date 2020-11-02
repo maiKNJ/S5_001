@@ -13,6 +13,8 @@ public class object_spawner : MonoBehaviour
     public FFTWindow FFTWindow;
     public GameObject LaserBeamOrigin;
 
+    private double timer;
+    private int objects = 0;
    // public Collider IgnoreCollision;
     //public Collider objectForCollision;
     void Start()
@@ -22,6 +24,8 @@ public class object_spawner : MonoBehaviour
         realTimeSpectralFluxAnalyzer = new SpectralFluxAnalyzer();
         Scene scene = SceneManager.GetActiveScene();
         //   Physics.IgnoreCollision(IgnoreCollision, objectForCollision, true);
+
+        timer = Time.time + 0.5;
     }
 
 
@@ -54,6 +58,34 @@ public class object_spawner : MonoBehaviour
                 poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
 
             }
+        }
+
+        if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+        {
+            if (timer < Time.time && objects> 0)
+            {
+                poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                timer = Time.time + 0.7;
+            }
+
+
+
+        }
+
+    }
+
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+        {
+            //if (timer < Time.time)
+            //{
+                poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+            objects += 1;
+                //timer = Time.time + 0.3;
+
+            //}
+
         }
     }
 }

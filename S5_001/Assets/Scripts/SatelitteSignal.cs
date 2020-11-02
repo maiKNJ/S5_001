@@ -2,29 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class SatelitteSignal : MonoBehaviour
 {
- 
-    private LineRenderer lr;
-    // Use this for initialization
+    public GameObject bullet;
+    public float speed = 100f;
+
+    // Start is called before the first frame update
     void Start()
     {
-        lr = GetComponent<LineRenderer>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        lr.SetPosition(0, transform.position);
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (hit.collider)
-            {
-                lr.SetPosition(1, hit.point);
-            }
+
+            //attackpoint for rotation 
+            GameObject instBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
+            Rigidbody instBulletRid = instBullet.GetComponent<Rigidbody>();
+            instBulletRid.AddForce(Vector3.forward * speed);
+            //  instBullet.GetComponent<Rigidbody>().velocity = 
+
         }
-        else lr.SetPosition(1, transform.forward * 5000);
     }
 }
-

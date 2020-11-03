@@ -38,7 +38,7 @@ public class object_spawner : MonoBehaviour
         audioSource.GetSpectrumData(spectrum, 0, FFTWindow);
         realTimeSpectralFluxAnalyzer.analyzeSpectrum(spectrum, audioSource.time);
 
-        if (SceneManager.GetActiveScene().name == "Earth") //first game scene
+        if (SceneManager.GetActiveScene().name == "earth") //first game scene
         {
             if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.02 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.04)
             {

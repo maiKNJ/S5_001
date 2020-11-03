@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -222,7 +222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 71117e9f46b5e51449e9e786c91c20d2, type: 2}
+  - {fileID: 2100000, guid: d84822c7f64332b4fac4cb8d2489c478, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -315,7 +315,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 598893fbc46d81146820758de95c0f03, type: 2}
+  - {fileID: 2100000, guid: f018555920da49e4f8778a674ded1c36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -409,7 +409,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e5a887bb68693449ac18a652579856b, type: 2}
+  - {fileID: 2100000, guid: 68e445ee51adb594391db779bd900dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -581,8 +581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FFTWindow: 5
-  LaserBeamOrigin: {fileID: 0}
-  parent: {fileID: 0}
 --- !u!4 &180808502
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,7 +1096,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: be7b32f9fd33f2043b7f24114d6086eb, type: 2}
+  - {fileID: 2100000, guid: cda0e0e0a40687441b2fdd0244972704, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1237,7 +1235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 58445e2bb734e8143a9422e9c041932d, type: 2}
+  - {fileID: 2100000, guid: d8b5d0122528a274187a77fcd077f601, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2538,7 +2536,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: da8518e9e2fcdcf409467f987f7bcea6, type: 2}
+  - {fileID: 2100000, guid: 9f1b3cf36125e584494bd397d494a3af, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2709,7 +2707,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2576c7aec4121dc43b689187e0bfb1a7, type: 2}
+  - {fileID: 2100000, guid: bd076e1def1013a4aa60469a08dc725a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3034,7 +3032,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fe76715469dff774799fdf577e553691, type: 2}
+  - {fileID: 2100000, guid: dd310e19039237d4fafc5b5684b37b5d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3127,7 +3125,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 137742bba869cc84ebe771d0ee422d7f, type: 2}
+  - {fileID: 2100000, guid: bc7ea23858296c748b3d444dc8b53c39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3519,11 +3517,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneChange
-      objectReference: {fileID: 0}
-    - target: {fileID: 1506233776550404882, guid: 7ceed836130edba46b8041e684fdcffe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1506233776550404892, guid: 7ceed836130edba46b8041e684fdcffe,
         type: 3}

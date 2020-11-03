@@ -143,8 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FFTWindow: 5
-  LaserBeamOrigin: {fileID: 0}
-  parent: {fileID: 0}
 --- !u!114 &6193449371736950846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,6 +161,7 @@ MonoBehaviour:
   microphone: 
   fftWindow: 5
   micDropdown: {fileID: 0}
+  thresholdSlider: {fileID: 0}
 --- !u!1 &6193449371770048137
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +223,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9e5a887bb68693449ac18a652579856b, type: 2}
+  - {fileID: 2100000, guid: 68e445ee51adb594391db779bd900dae, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

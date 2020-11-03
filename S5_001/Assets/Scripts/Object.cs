@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Object : MonoBehaviour, IPooledObject
 {
@@ -35,6 +36,10 @@ public class Object : MonoBehaviour, IPooledObject
 
         //transform.GetComponent<Rigidbody>().velocity = newVelocity;
         transform.position += direction * speed * (Time.deltaTime/4);
+        if (SceneManager.GetActiveScene().name == "C4")
+        {
+            transform.RotateAround(Center.position, Axis, 80 * Time.deltaTime);
+        }
 
         //MISSING SPEED CONTROL!
 

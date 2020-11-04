@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5749192118623280040}
   - component: {fileID: 4799572073560604000}
   - component: {fileID: 1904145509898007738}
-  m_Layer: 0
+  - component: {fileID: 4270191135792474303}
+  m_Layer: 10
   m_Name: LaserBeam
   m_TagString: Laser
   m_Icon: {fileID: 0}
@@ -127,3 +128,22 @@ MonoBehaviour:
   speed: 20
   LaserBeamOrigin: {fileID: 919132149155446097, guid: 55d277f34df9e7a489b06f93ba50cc46,
     type: 3}
+  particles: {fileID: 5079757250782075100, guid: 4da61e59f0b7e224eb22e5042c76f109,
+    type: 3}
+--- !u!114 &4270191135792474303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893690626085225704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd2b73b9e84b294285bece4433e5def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sparkleEffect: {fileID: 7137879837848934369, guid: 439c619d27795b74eb9c117391a8e7e0,
+    type: 3}
+  minForce: 10
+  maxForce: 200
+  radius: 40

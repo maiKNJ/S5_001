@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
-
+using UnityEngine.Rendering;
 
 public class Laser_EndScene : MonoBehaviour, IPooledObject
 {
@@ -9,6 +10,8 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
     //public float range2 = 1f;
     public float speed = 10;
     public GameObject LaserBeamOrigin;
+    //public GameObject satellite;
+    public ParticleSystem particles;
 
     public void OnObjectSpawn()
     {
@@ -37,9 +40,26 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "IgnoreLowOrbit")
+        /*if (col.gameObject.tag == "IgnoreLowOrbit")
         {
             Physics.IgnoreCollision(GetComponent<Collider>(), col.gameObject.GetComponent<Collider>(), true);
+        }*/
+    }
+
+
+    void OnParticleCollision(GameObject other)
+    {
+        other = gameObject;
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        
+        if (other != null) {
+           
+            if (rb)
+            {
+                rb.gameObject.GetComponent<Sparkle>().sparkles();
+                rb.gameObject.SetActive(false); //remove laser beam
+            }
         }
     }
+
 }

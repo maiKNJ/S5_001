@@ -5,21 +5,17 @@ using UnityEngine;
 public class EndText : MonoBehaviour
 {
 
-    public GameObject TextPlane;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Animator transition;
+    public float timeBeforeEndText = 10f; //REMEMBER TO CHANGE TIME IN OBJECT_SPAWNER ALSO AS IT STOPS SPAWNING AFTER SAME AMOUNT OF TIME!
 
     // Update is called once per frame
     void Update()
     {
-        /*if ()
+        Debug.Log("time is " + Time.time);
+
+        if (Time.time >= timeBeforeEndText)
         {
-            TextPlane.SetActive(true);
-        }*/
-        
+            transition.SetTrigger("Start");
+        }
     }
 }

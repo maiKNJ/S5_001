@@ -13,6 +13,11 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
     //public GameObject satellite;
     public ParticleSystem particles;
 
+    void Update()
+    {
+
+    }
+
     public void OnObjectSpawn()
     {
         //Quaternion dir = LaserBeamOrigin.transform.rotation;

@@ -53,7 +53,8 @@ public class object_spawner : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
         {
-            if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+            
+            if (Time.time <= 10 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
             {
                 poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
 

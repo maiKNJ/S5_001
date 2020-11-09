@@ -57,7 +57,7 @@ public class Explosion : MonoBehaviour
     {
         //collisions += 1;
         //Debug.Log("collsions" + collisions);
-        if (col.gameObject.tag == "Finish") {
+        if (col.gameObject.tag == "Finish" || col.gameObject.layer == 9) { //layer 9 is "SatLight"
             
 
                 if (originalObject != null)

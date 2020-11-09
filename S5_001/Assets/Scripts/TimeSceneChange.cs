@@ -12,7 +12,7 @@ public class TimeSceneChange : MonoBehaviour
     private float waitTime = 9000;
 
     public Animator transistion;
-    public float transTime = 1f;
+    public float transTime = 10f;
     void Start()
     {
         Application.targetFrameRate = 30;
@@ -23,23 +23,45 @@ public class TimeSceneChange : MonoBehaviour
     void Update()
     {
         
-        timer += Time.frameCount;
+       /* timer += Time.frameCount;
         Debug.Log("time" + timer);
 
         if (timer >= waitTime)
         {
-            Debug.Log("inside 5 collsions");
+            //Debug.Log("inside 5 collsions");
             //NewScene();
-            LoadScene();
+
+            //LoadScene();
+
+            transistion.SetTrigger("start");
+        }
+       */
+
+        if (Time.time >= transTime)
+        {
+            transistion.SetTrigger("start");
+        }
+
+        Debug.Log("time is " + Time.time);
+        if (Time.time >= transTime + 3f)
+        {
+            SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
         }
 
     }
 
+    //NOT USING THE CODE BELOW!
     public void NewScene()
     {
        // StartCoroutine(LoadScene());
     }
 
+    /*IEnumerator LoadScene()
+    {
+        transistion.SetTrigger("start");
+        yield return new WaitForSeconds(transTime);
+        complete();
+    }*/
     public void LoadScene()
     {
         //Play animation
@@ -50,10 +72,20 @@ public class TimeSceneChange : MonoBehaviour
 
         //New scene
         //SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+        Debug.Log("inside loadScene");
+        complete();
+        
     }
 
     public void complete()
     {
         SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+       
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        /*if (SceneManager.sceneCountInBuildSettings <= 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }*/
     }
 }

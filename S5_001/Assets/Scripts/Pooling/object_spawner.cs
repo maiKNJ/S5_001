@@ -73,6 +73,11 @@ public class object_spawner : MonoBehaviour
 
         }
 
+        if (SceneManager.GetActiveScene().name == "C4")
+        {
+            poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
+        }
+
     }
 
     private void OnEnable()

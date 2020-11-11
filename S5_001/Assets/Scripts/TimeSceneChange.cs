@@ -13,6 +13,7 @@ public class TimeSceneChange : MonoBehaviour
 
     public Animator transistion;
     public float transTime = 10f;
+    public float outroTime = 3f;
     void Start()
     {
         Application.targetFrameRate = 30;
@@ -22,30 +23,30 @@ public class TimeSceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /* timer += Time.frameCount;
+         Debug.Log("time" + timer);
+
+         if (timer >= waitTime)
+         {
+             //Debug.Log("inside 5 collsions");
+             //NewScene();
+
+             //LoadScene();
+
+             transistion.SetTrigger("start");
+         }
+        */
         
-       /* timer += Time.frameCount;
-        Debug.Log("time" + timer);
-
-        if (timer >= waitTime)
-        {
-            //Debug.Log("inside 5 collsions");
-            //NewScene();
-
-            //LoadScene();
-
-            transistion.SetTrigger("start");
-        }
-       */
-
         if (Time.time >= transTime)
         {
             transistion.SetTrigger("start");
         }
-
         Debug.Log("time is " + Time.time);
-        if (Time.time >= transTime + 3f)
+        if (Time.time >= transTime + outroTime)
         {
-            SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
         }
 
     }

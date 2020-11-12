@@ -7,6 +7,6 @@ public class NewScene : MonoBehaviour
 {
     private void OnEnable()
     {
-        SceneManager.LoadScene("earth", LoadSceneMode.Additive);
+        SceneManager.LoadScene("Cutscene3", LoadSceneMode.Additive);
     }
 }

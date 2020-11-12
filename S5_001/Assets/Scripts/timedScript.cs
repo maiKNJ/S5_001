@@ -14,30 +14,45 @@ public class timedScript : MonoBehaviour
     float nextTime;
     float modifier;
 
+    public float timeRemaining = 5;
+    public bool timerIsRunning = false;
 
-    // Use this for initialization
-    void Start()
 
+    private void Start()
     {
-        nextTime = 0;
-       
+        // Starts the timer automatically
+        timerIsRunning = true;
+
+        modifier = Random.Range(0, 3);
+
     }
 
     public void Update()
     {
-
-
-        modifier = Random.Range(1, 10);
-
-
-        nextTime = Time.time + modifier;
-        if(Time.time > nextTime)
-        {
-            Instantiate(spawnee, transform.position, transform.rotation);
-        }
-       
-
         
+
+  
+
+
+
+        if (timerIsRunning)
+        {
+            if (timeRemaining > 0)
+            {
+          
+                timeRemaining -= Time.deltaTime;
+
+
+            }
+            else
+            {
+
+                Instantiate(spawnee, transform.position, transform.rotation);
+                timeRemaining = 1 + modifier;
+            }
+        }
+
+
     }
 
     public void SpawnObject()

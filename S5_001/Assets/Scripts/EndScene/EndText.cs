@@ -11,7 +11,7 @@ public class EndText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("time is " + Time.time);
+        //Debug.Log("time is " + Time.time);
 
         if (Time.time >= timeBeforeEndText)
         {

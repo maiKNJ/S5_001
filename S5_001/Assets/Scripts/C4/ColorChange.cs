@@ -9,6 +9,8 @@ public class ColorChange : MonoBehaviour
     private ParticleSystem.Particle[] particles;
     float timer = 10f;
     float time;
+    public GameObject earth;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,20 +20,29 @@ public class ColorChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject lines = GameObject.Find("LineObj");
         time += Time.deltaTime;
         ParticleSystem.MainModule psmain = ps.main;
-        if (time > timer)
+        if (time > timer && time < timer+15)
         {
             /*particles = new ParticleSystem.Particle[ps.particleCount];
             ps.GetParticles(particles);*/
             
 
             psmain.startColor = Color.red;
+            Destroy(earth.transform.GetChild(1).gameObject,0.008f);
+            Destroy(earth.transform.GetChild(2).gameObject, 0.008f);
+            Destroy(earth.transform.GetChild(3).gameObject, 0.008f);
+            Debug.Log("red");
 
         }
         if (time > timer+20)
         {
+            Debug.Log("green");
             psmain.startColor = Color.green;
+            //Destroy(earth.transform.GetChild(1).gameObject, 5);
+            //Destroy(earth.transform.GetChild(2).gameObject, 5);
+            //Destroy(earth.transform.GetChild(3).gameObject, 5);
         }
         /*if (particles != null)
         {

@@ -1466,6 +1466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnee: {fileID: 398370524}
+  timeRemaining: 5
+  timerIsRunning: 0
 --- !u!1 &1546403773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1667,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1634007355884828007}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1647199443 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1634007354239201718, guid: ac93a5d47016bd94f865079db53c2ceb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634007355884828007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1843720990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1756,7 @@ GameObject:
   - component: {fileID: 2063294153}
   - component: {fileID: 2063294152}
   - component: {fileID: 2063294155}
+  - component: {fileID: 2063294156}
   - component: {fileID: 2063294154}
   m_Layer: 0
   m_Name: EarthCore
@@ -1798,11 +1807,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2063294151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7437b4b31a03d794a95a896e859fa276, type: 3}
+  m_Script: {fileID: 11500000, guid: 97dfd74214643a8448fc85acf64a7985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  target: {fileID: 398370529}
+  spawnee: {fileID: 398370524}
+  timeRemaining: 2
+  timerIsRunning: 0
 --- !u!54 &2063294155
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1819,6 +1829,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2063294156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063294151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fc57c0a0c0e834099f0db30643360e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 5
+  timerIsRunning: 0
+  speed: 10
+  system: {fileID: 1647199443}
+  length: 0.8
+  shooterTransform: {fileID: 398370529}
 --- !u!1001 &1634007355884828007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,6 +1858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: finalSignal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634007354239201704, guid: ac93a5d47016bd94f865079db53c2ceb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1634007354239201717, guid: ac93a5d47016bd94f865079db53c2ceb,
         type: 3}
@@ -1900,6 +1933,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634007354239201718, guid: ac93a5d47016bd94f865079db53c2ceb,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1634007354239201718, guid: ac93a5d47016bd94f865079db53c2ceb,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634007354239201719, guid: ac93a5d47016bd94f865079db53c2ceb,
         type: 3}

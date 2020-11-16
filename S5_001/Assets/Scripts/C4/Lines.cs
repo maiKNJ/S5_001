@@ -43,7 +43,7 @@ public class Lines : MonoBehaviour
                 //vertices[i] += Vector3.up * Time.deltaTime;
                 if (time > timer)
                 {
-                    Debug.Log("timer " + timer);
+                    //Debug.Log("timer " + timer);
                     point1[x].transform.position = new Vector3(Random.Range(0, vertices[i].x), Random.Range(0, vertices[i].y), Random.Range(0, vertices[i].z));
                     point3[x].transform.position = new Vector3(Random.Range(0, vertices[i].x), Random.Range(0, vertices[i].y), Random.Range(0, vertices[i].z));
                     timer += Time.deltaTime + 0.5f;

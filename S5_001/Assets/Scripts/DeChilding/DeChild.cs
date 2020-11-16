@@ -31,7 +31,9 @@ public class DeChild : MonoBehaviour
     {
         //childV = child.transform.position;
         //Vector3 child1V = transform.TransformPoint(childV);
-        Debug.Log(Time.frameCount);
+
+        //Debug.Log(Time.frameCount);
+
         //childV = child.transform.position;
         if (Time.frameCount > 107)
         {
@@ -46,7 +48,8 @@ public class DeChild : MonoBehaviour
 
             //child2.transform.parent = null;
             //child3.transform.parent = null;
-            Debug.Log("okay");
+
+            //Debug.Log("okay");
             
         }
 

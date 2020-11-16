@@ -42,7 +42,7 @@ public class TimeSceneChange : MonoBehaviour
         {
             transistion.SetTrigger("start");
         }
-        Debug.Log("time is " + Time.time);
+        //Debug.Log("time is " + Time.time);
         if (Time.time >= transTime + outroTime)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -73,7 +73,7 @@ public class TimeSceneChange : MonoBehaviour
 
         //New scene
         //SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
-        Debug.Log("inside loadScene");
+        //Debug.Log("inside loadScene");
         complete();
         
     }

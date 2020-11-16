@@ -27,7 +27,7 @@ public class LightDetection : MonoBehaviour
             if (color.r == 1 && color.g == 1 && color.b == 1 && color.a == 1)
             {
                 whitePixels++;
-                Debug.Log("whitePixels " + whitePixels);
+                //Debug.Log("whitePixels " + whitePixels);
 
                 if (whitePixels == 100) { whitePixels = 0; }
 

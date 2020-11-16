@@ -14,6 +14,7 @@ public class TimeSceneChange : MonoBehaviour
     public Animator transistion;
     public float transTime = 10f;
     public float outroTime = 3f;
+    public AudioSource audioclip;
     void Start()
     {
         Application.targetFrameRate = 30;
@@ -46,7 +47,8 @@ public class TimeSceneChange : MonoBehaviour
         if (Time.time >= transTime + outroTime)
         {
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+            SceneManager.LoadScene("earth", LoadSceneMode.Single);
+            audioclip.Stop();
         }
 
     }

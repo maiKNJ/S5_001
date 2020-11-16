@@ -75,9 +75,9 @@ public class SpectralFluxAnalyzer
 			if (curPeak)
 			{
 				spectralFluxSamples[indexToDetectPeak].isPeak = true;
-				//Debug.Log("peak" + curInfo.spectralFlux);
-				//Debug.Log(indexToDetectPeak);
-				//Debug.Log("rectified flux" + calculateRectifiedSpectralFlux());
+				Debug.Log("peak" + curInfo.spectralFlux);
+				Debug.Log(indexToDetectPeak);
+				Debug.Log("rectified flux" + calculateRectifiedSpectralFlux());
 			}
 			indexToProcess++;
 		}

@@ -128,9 +128,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1308428433}
     m_Modifications:
+    - target: {fileID: 6193449371736950833, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: affbeb663ef62e740b1a6a5df361e1d3,
+        type: 2}
+    - target: {fileID: 6193449371736950833, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193449371736950833, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6193449371736950834, guid: bfb1e6f50d1387f49bf57d0725f10185,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193449371736950846, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6193449371770048137, guid: bfb1e6f50d1387f49bf57d0725f10185,
@@ -480,8 +501,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transistion: {fileID: 1685649145}
-  transTime: 20
+  transTime: 22
   outroTime: 3
+  audioclip: {fileID: 1879379663}
 --- !u!1001 &340345855
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2044,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &1879379663
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2055,9 +2077,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f56a3252ad94bcc4a9500413a3e0129d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.14
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2325,8 +2347,8 @@ PlayableDirector:
     value: {fileID: 1422102850}
   - key: {fileID: 8642169896341451299, guid: c7c9977548842b64eb57fa628b93f51b, type: 2}
     value: {fileID: 441206619}
-  - key: {fileID: 5583992920216904013, guid: c7c9977548842b64eb57fa628b93f51b, type: 2}
-    value: {fileID: 0}
+  - key: {fileID: -3754195426898195144, guid: c7c9977548842b64eb57fa628b93f51b, type: 2}
+    value: {fileID: 1879379663}
   m_ExposedReferences:
     m_References:
     - e1fbaaa1e7535314e998c5a184e51460: {fileID: 441206620}

@@ -29,6 +29,7 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
         transform.position += direction * speed * Time.deltaTime;*/
         //transform.rotation = dir;
         // Vector3 direction = Vector3.Scale(Vector3.one, LaserBeamOrigin.transform.position);
+        
         Rigidbody instBulletRid = GetComponent<Rigidbody>();
         instBulletRid.AddForce(Vector3.up * speed);
 
@@ -40,6 +41,7 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
         direction.Normalize();
         Vector3 newVelocity = speed * direction;
         transform.position += newVelocity * Time.deltaTime;*/
+
 
     }
 

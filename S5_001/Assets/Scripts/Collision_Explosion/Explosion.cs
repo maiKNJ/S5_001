@@ -15,15 +15,24 @@ public class Explosion : MonoBehaviour
     public float radius;
 
     public GameObject originalObject;
+    public AudioSource soundfx;
 
 
 
+
+    public void Start()
+    {
+        soundfx = Instantiate(soundfx);
+    }
 
     public void Explode()
     {
         if (explosion != null)
         {
+            soundfx.Play();
             GameObject explosionFX = Instantiate(explosion, transform.position + explosionOffset, Quaternion.identity) as GameObject;
+            
+
             Destroy(explosionFX, 5);
         }
 
@@ -64,6 +73,7 @@ public class Explosion : MonoBehaviour
                 {
                     originalObject.GetComponent<Explosion>().Explode();
                     originalObject.SetActive(false);
+                    
                 }
         }
     }

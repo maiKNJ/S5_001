@@ -739,6 +739,7 @@ MonoBehaviour:
   maxForce: 750
   radius: 40
   originalObject: {fileID: 6095852555684197494}
+  soundfx: {fileID: 258236026305693421, guid: a050a3ef30d81a44fb28d39b614c63fc, type: 3}
 --- !u!1 &6739371271402308446
 GameObject:
   m_ObjectHideFlags: 0

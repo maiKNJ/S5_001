@@ -8,12 +8,15 @@ public class Sparkle : MonoBehaviour
     public float minForce;
     public float maxForce;
     public float radius;
+    public AudioSource soundfx;
 
 
+    
     public void sparkles()
     {
         if(sparkleEffect != null)
         {
+            soundfx.Play();
             GameObject sparkleFX = Instantiate(sparkleEffect, transform.position, Quaternion.identity) as GameObject;
             Destroy(sparkleFX, 2);
         }
@@ -31,7 +34,7 @@ public class Sparkle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundfx = Instantiate(soundfx);
     }
 
     // Update is called once per frame

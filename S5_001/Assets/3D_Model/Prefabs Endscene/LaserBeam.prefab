@@ -147,3 +147,4 @@ MonoBehaviour:
   minForce: 10
   maxForce: 200
   radius: 40
+  soundfx: {fileID: 6706066752496591579, guid: a850c4762922a8542b865784ef4293cd, type: 3}

@@ -12,6 +12,7 @@ public class object_spawner : MonoBehaviour
     AudioSource audioSource;
     public FFTWindow FFTWindow;
     public GameObject LaserBeamOrigin;
+    public AudioSource soundfx;
 
     private double timer;
     private int objects = 0;
@@ -57,6 +58,7 @@ public class object_spawner : MonoBehaviour
             if (Time.time <= 100 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
             {
                 poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
+                soundfx.Play();
 
             }
             if (timer < Time.time)

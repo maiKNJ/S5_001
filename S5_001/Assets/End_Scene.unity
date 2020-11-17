@@ -1128,6 +1128,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 399832138}
   speed: 1000
+--- !u!82 &1257078659 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6706066752496591579, guid: a850c4762922a8542b865784ef4293cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 6706066751252110680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1376717221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1140,6 +1146,11 @@ PrefabInstance:
       propertyPath: LaserBeamOrigin
       value: 
       objectReference: {fileID: 4610338695926288453}
+    - target: {fileID: 6193449371736950835, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: soundfx
+      value: 
+      objectReference: {fileID: 1257078659}
     - target: {fileID: 6193449371770048137, guid: bfb1e6f50d1387f49bf57d0725f10185,
         type: 3}
       propertyPath: m_Name
@@ -2034,6 +2045,85 @@ Transform:
   m_Father: {fileID: 975257858}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6706066751252110680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6706066752496591578, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_Name
+      value: soundfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591579, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ee0af01cd1a2a354797cc65339e10f0c, type: 3}
+    - target: {fileID: 6706066752496591579, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 33.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6706066752496591580, guid: a850c4762922a8542b865784ef4293cd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a850c4762922a8542b865784ef4293cd, type: 3}
 --- !u!33 &6960662360032786822
 MeshFilter:
   m_ObjectHideFlags: 0

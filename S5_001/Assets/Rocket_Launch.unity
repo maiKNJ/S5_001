@@ -182,8 +182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22831545}
-  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173442, w: 0.96240276}
-  m_LocalPosition: {x: 6.082115, y: -8.901983, z: -0.30724335}
+  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173438, w: 0.96240276}
+  m_LocalPosition: {x: 4.491432, y: 2.998808, z: -38.39956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2110986227}
@@ -468,6 +468,10 @@ PlayableDirector:
     value: {fileID: 477916076}
   - key: {fileID: 2543044868641393402, guid: 6b628704d8878134a815142ae70f361e, type: 2}
     value: {fileID: 2066738381}
+  - key: {fileID: -1742396182456385129, guid: 6b628704d8878134a815142ae70f361e, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1409784539407973682, guid: 6b628704d8878134a815142ae70f361e, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 105007d449ebac24c8e963a9d81cc0cd: {fileID: 658224071}
@@ -998,7 +1002,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775645828}
-  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173442, w: 0.96240276}
+  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173438, w: 0.96240276}
   m_LocalPosition: {x: -105.2293, y: -25.599998, z: 70.79245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1140,6 +1144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101533144}
   - component: {fileID: 1101533145}
+  - component: {fileID: 1101533146}
   m_Layer: 0
   m_Name: NoseConeParent
   m_TagString: Untagged
@@ -1168,7 +1173,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101533143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4931ed53cf3aae14e851684501415da6, type: 3}
   m_Name: 
@@ -1181,6 +1186,27 @@ MonoBehaviour:
   - {fileID: 1608401724}
   rotation: {x: 0, y: 1, z: 0}
   Earth: {fileID: 545481593}
+  Axis: {x: 0, y: 1, z: 0}
+--- !u!114 &1101533146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101533143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b6b9c9d0b8414d4792e587d982263b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Nose:
+  - {fileID: 8356064164955550152}
+  - {fileID: 928117244074675134}
+  NoseParent:
+  - {fileID: 1101533144}
+  - {fileID: 1608401724}
+  rotation: {x: 0, y: 1, z: 0}
+  earth: {fileID: 545481593}
   Axis: {x: 0, y: 1, z: 0}
 --- !u!1001 &1170827224
 PrefabInstance:
@@ -1325,8 +1351,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227874237}
-  m_LocalRotation: {x: 0.5895246, y: 0.26133025, z: -0.20960473, w: 0.73500556}
-  m_LocalPosition: {x: 2.1821136, y: -7.6119823, z: 7.792755}
+  m_LocalRotation: {x: 0.61882997, y: 0.17380373, z: -0.14290965, w: 0.7526079}
+  m_LocalPosition: {x: 0.59143066, y: 4.288809, z: -30.29956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1473767298}
@@ -1979,6 +2005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031068834}
   - component: {fileID: 2031068835}
+  - component: {fileID: 2031068836}
   m_Layer: 0
   m_Name: CorestageParent
   m_TagString: Untagged
@@ -2007,7 +2034,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031068833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4931ed53cf3aae14e851684501415da6, type: 3}
   m_Name: 
@@ -2019,6 +2046,23 @@ MonoBehaviour:
   rotation: {x: 0, y: 1, z: 0}
   Earth: {fileID: 545481593}
   Axis: {x: 0, y: 1, z: 0}
+--- !u!114 &2031068836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031068833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f65fb1f78c14e40abf2c6d524831d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  core: {fileID: 7334197893992187880}
+  coreParent: {fileID: 2031068834}
+  rotation: {x: 0, y: 1, z: 0}
+  earth: {fileID: 545481593}
+  axis: {x: 0, y: 1, z: 0}
 --- !u!1 &2066738381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6193449371736950834, guid: bfb1e6f50d1387f49bf57d0725f10185,

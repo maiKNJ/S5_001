@@ -9,12 +9,12 @@ public class NewScene : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Rocket_Launch")
         {
-            SceneManager.LoadScene("Cutscene3", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Cutscene3", LoadSceneMode.Single);
         }
 
         if (SceneManager.GetActiveScene().name == "Cutscene3")
         {
-            SceneManager.LoadScene("C4", LoadSceneMode.Single);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
         }
 
         if (SceneManager.GetActiveScene().name == "C4")

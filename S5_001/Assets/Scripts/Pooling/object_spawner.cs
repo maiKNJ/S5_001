@@ -94,7 +94,7 @@ public class object_spawner : MonoBehaviour
         {
             //if (timer < Time.time)
             //{
-                poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                //poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
             objects += 1;
                 //timer = Time.time + 0.3;
 

@@ -456,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174319031}
   m_LocalRotation: {x: -0.08120226, y: -0.020333992, z: 0.0016578517, w: -0.9964888}
-  m_LocalPosition: {x: 1.0408337, y: 9.4906025, z: -17.945219}
+  m_LocalPosition: {x: -0, y: 7, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transistion: {fileID: 1293077197}
-  transTime: 100
+  transTime: 30
   outroTime: 3
   audioclip: {fileID: 0}
 --- !u!1 &1026395008

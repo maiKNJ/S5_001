@@ -8,7 +8,7 @@ public class EarthMesh : MonoBehaviour
     Color beginColor = Color.yellow;
     Color endColor = Color.red;
     float hightlightSize = 0.01f;
-    public LineRenderer line2;
+    //public LineRenderer line2;
 
     void Update()
     {

@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Rocket_Launch.unity
     guid: 4fe217e4503e9624caa5fa959557df32
+  - enabled: 1
+    path: Assets/Cutscene3.unity
+    guid: 839f9c73e8e0faf44a7cb3ec1fc0040f
+  - enabled: 1
+    path: Assets/C4.unity
+    guid: aeb1e87a895107d42b19033e47527e8d
+  - enabled: 1
+    path: Assets/End_Scene.unity
+    guid: 4aed3de1049a3164cbdd37c1d1c921a5
+  - enabled: 1
+    path: Assets/End_end.unity
+    guid: ec7403bddd68c044bbf80d18baf60ff9
   m_configObjects: {}

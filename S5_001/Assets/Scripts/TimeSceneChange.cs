@@ -46,9 +46,22 @@ public class TimeSceneChange : MonoBehaviour
         //Debug.Log("time is " + Time.time);
         if (Time.time >= transTime + outroTime)
         {
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            SceneManager.LoadScene("earth", LoadSceneMode.Single);
-            audioclip.Stop();
+            if (SceneManager.GetActiveScene().name == "IntroScene")
+            {
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                SceneManager.LoadScene("earth", LoadSceneMode.Single);
+                audioclip.Stop();
+            }
+            if (SceneManager.GetActiveScene().name == "earth")
+            {
+                SceneManager.LoadScene("Rocket_Launch", LoadSceneMode.Single);
+            }
+
+            if (SceneManager.GetActiveScene().name == "End_Scene")
+            {
+                SceneManager.LoadScene("End_end", LoadSceneMode.Single);
+            }
+
         }
 
     }

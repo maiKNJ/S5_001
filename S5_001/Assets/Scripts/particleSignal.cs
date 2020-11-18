@@ -35,12 +35,9 @@ public class particleSignal : MonoBehaviour {
     {
 
         var go = GameObject.Find("finalSignal");
-        if (timerIsRunning)
-        {
-            if (timeRemaining > 0)
-            {
+        if (timerIsRunning) {
+            if (timeRemaining > 0){
                 timeRemaining -= Time.deltaTime;
-               
             }
             else
             {

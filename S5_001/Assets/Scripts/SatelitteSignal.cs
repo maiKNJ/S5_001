@@ -11,60 +11,35 @@ public class SatelitteSignal : MonoBehaviour
     public ParticleSystem.Particle[] m_Particles;
     public double length = 0.8;
     private bool beingHandled = false;
-
     public Transform shooterTransform;
+    float modifier;
 
-
-
-    private void Start()
-    {
-        // Starts the timer automatically
+    private void Start() {
         timerIsRunning = true;
+        modifier = Random.Range(0, 3);
     }
 
-    public void Update()
-    {
-
-
+    public void Update() {
         float step = speed * Time.deltaTime;
 
         Vector3 target = Vector3.RotateTowards(transform.forward, shooterTransform.position, step, 0.0f);
         system.transform.rotation = Quaternion.LookRotation(target);
 
-
-
-        if (timerIsRunning)
-        {
-            if (timeRemaining > 0)
-            { system.startLifetime = 1;
+        if (timerIsRunning) {
+            if (timeRemaining > 0){
+                system.startLifetime = 1;
                 timeRemaining -= Time.deltaTime;
-
-               
             }
-            else
-            {
-               
-
-       
+            else {
                 system.startLifetime = 0.0f;
-                StartCoroutine(HandleIt());
-               
+                StartCoroutine(HandleIt()); 
+            }}}
 
-               
-            }
-        }
-
-
-    }
-
-    private IEnumerator HandleIt()
-{
+    private IEnumerator HandleIt(){
     beingHandled = true;
 
         system.startLifetime = 0.0f;
         yield return new WaitForSeconds( 5 );
     beingHandled = false;
-        timeRemaining = 1;
-    }
-
-}
+        timeRemaining = 1 + modifier;
+    }}

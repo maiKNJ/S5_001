@@ -47,10 +47,11 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
 
     void OnCollisionEnter(Collision col)
     {
-        /*if (col.gameObject.tag == "IgnoreLowOrbit")
+        if (col.gameObject.tag == "IgnoreLowOrbit")
         {
-            Physics.IgnoreCollision(GetComponent<Collider>(), col.gameObject.GetComponent<Collider>(), true);
-        }*/
+            //Physics.IgnoreCollision(col.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreCollision(GetComponent<Collider>(), col.gameObject.GetComponent<Collider>());
+        }
     }
 
 

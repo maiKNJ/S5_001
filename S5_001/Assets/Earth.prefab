@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FFTWindow: 5
   LaserBeamOrigin: {fileID: 0}
+  soundfx: {fileID: 0}
 --- !u!114 &6193449371736950846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +225,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 68e445ee51adb594391db779bd900dae, type: 2}
-  - {fileID: 2100000, guid: 3be4e2b0289c6fc44a3391b380f054e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

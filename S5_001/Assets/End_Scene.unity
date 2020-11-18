@@ -1484,7 +1484,7 @@ MonoBehaviour:
   - tag: Laser
     prefab: {fileID: 1893690626085225704, guid: acc861c64aeb6144ebc72bc16e5450f1,
       type: 3}
-    size: 10
+    size: 5
   - tag: Satellite
     prefab: {fileID: 6095852555684197494, guid: 1fc2ad6da6b9e5545b42052ed772303b,
       type: 3}

@@ -14,6 +14,10 @@ public class object_spawner : MonoBehaviour
     public GameObject LaserBeamOrigin;
     public AudioSource soundfx;
 
+    private bool soundInput = true; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
+    bool fire = false;
+    bool fireSecond = false;
+
     private double timer;
     private int objects = 0;
    // public Collider IgnoreCollision;
@@ -34,58 +38,144 @@ public class object_spawner : MonoBehaviour
     {
         float[] spectrum = new float[1024];
 
-
-        //GetComponent<AudioSource>().GetSpectrumData(spectrum, 0, FFTWindow);
-        audioSource.GetSpectrumData(spectrum, 0, FFTWindow);
-        realTimeSpectralFluxAnalyzer.analyzeSpectrum(spectrum, audioSource.time);
-
-        if (SceneManager.GetActiveScene().name == "earth") //first game scene
+        if (soundInput == true)
         {
-            if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.02 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.04)
+            //GetComponent<AudioSource>().GetSpectrumData(spectrum, 0, FFTWindow);
+            audioSource.GetSpectrumData(spectrum, 0, FFTWindow);
+            realTimeSpectralFluxAnalyzer.analyzeSpectrum(spectrum, audioSource.time);
+
+            if (SceneManager.GetActiveScene().name == "earth") //first game scene
             {
-                //Debug.Log("check " + realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux());
-                poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
+                if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.02 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.04)
+                {
+                    //Debug.Log("check " + realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux());
+                    poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
+                }
+                if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+                {
+                    poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
+                }
             }
-            if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+
+            if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
             {
-                poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
+
+                if (Time.time <= 100 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+                {
+                    poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
+                    soundfx.Play();
+
+                }
+                if (timer < Time.time)
+                {
+                    poolManager.spawnFromPool("Satellite", transform.position, transform.rotation);
+                    timer = Time.time + 2;
+                }
+
+            }
+
+            if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+            {
+                if (timer < Time.time && objects > 0)
+                {
+                    poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                    timer = Time.time + 0.7;
+                }
+
+
+
+            }
+
+            if (SceneManager.GetActiveScene().name == "C4")
+            {
+                poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
             }
         }
 
-        if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
+        if (soundInput == false)
         {
-            
-            if (Time.time <= 100 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+            if (SceneManager.GetActiveScene().name == "earth")
             {
-                poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
-                soundfx.Play();
+                if (fire == true)
+                {
+                    Debug.Log("inside fire");
+                    poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
+                    fire = false;
+                }
 
-            }
-            if (timer < Time.time)
-            {
-                poolManager.spawnFromPool("Satellite", transform.position, transform.rotation);
-                timer = Time.time + 2;
-            }
-
-        }
-
-        if (SceneManager.GetActiveScene().name == "Rocket_Launch")
-        {
-            if (timer < Time.time && objects> 0)
-            {
-                poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
-                timer = Time.time + 0.7;
+                if (fireSecond == true)
+                {
+                    poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
+                    fireSecond = false;
+                }
             }
 
 
+            if (SceneManager.GetActiveScene().name == "End_Scene")
+            {
+                if (fire == true)
+                {
+                    poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
+                    soundfx.Play();
+                    fire = false;
+                }
 
+            }
+
+
+
+                if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+            {
+                if (timer < Time.time && objects > 0)
+                {
+                    poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                    timer = Time.time + 0.7;
+                }
+
+
+
+            }
+
+            if (SceneManager.GetActiveScene().name == "C4")
+            {
+                poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
+            }
         }
 
-        if (SceneManager.GetActiveScene().name == "C4")
+    }
+
+    private void Update()
+    {
+        
+        if (soundInput == false)
         {
-            poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
-        }
+            if (SceneManager.GetActiveScene().name == "earth") //first game scene
+            {
+                if (Input.GetKeyDown(KeyCode.N))
+                {
+                    fire = true;
+                }
+                if (Input.GetKeyDown(KeyCode.M))
+                {
+                    fireSecond = true;
+                }
+            }
 
+            if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
+            {
+                if (Input.anyKeyDown)
+                {
+                    fire = true;
+                }
+                if (timer < Time.time)
+                {
+                    poolManager.spawnFromPool("Satellite", transform.position, transform.rotation);
+                    timer = Time.time + 2;
+                }
+
+            }
+        }
+        
     }
 
     private void OnEnable()

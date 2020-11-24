@@ -182,8 +182,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22831545}
-  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173438, w: 0.96240276}
-  m_LocalPosition: {x: 4.491432, y: 2.998808, z: -38.39956}
+  m_LocalRotation: {x: 0.24363469, y: 0.066285774, z: -0.01669274, w: 0.96745527}
+  m_LocalPosition: {x: -6.3688736, y: 9.918806, z: 0.3848877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2110986227}
@@ -968,7 +968,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 32.96973
+  m_FocalLength: 32.37
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1002,7 +1002,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775645828}
-  m_LocalRotation: {x: 0.25913098, y: 0.078637205, z: -0.021173438, w: 0.96240276}
+  m_LocalRotation: {x: 0.49582946, y: 0.13553134, z: -0.03413079, w: 0.6576085}
   m_LocalPosition: {x: -105.2293, y: -25.599998, z: 70.79245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 9
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 6760742848650043406}
   m_Follow: {fileID: 0}
@@ -1351,8 +1351,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227874237}
-  m_LocalRotation: {x: 0.61882997, y: 0.17380373, z: -0.14290965, w: 0.7526079}
-  m_LocalPosition: {x: 0.59143066, y: 4.288809, z: -30.29956}
+  m_LocalRotation: {x: 0.56799835, y: 0.30247414, z: -0.23594353, w: 0.7281607}
+  m_LocalPosition: {x: -7.0455704, y: 12.038805, z: 7.956108}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1473767298}
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -3.9, y: 9.88, z: -1.57}
+  m_FollowOffset: {x: -2.22, y: 10.71, z: -2.4}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -1725,7 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: -2.49, y: -2.59, z: 1.32}
+  m_TrackedObjectOffset: {x: -1.77, y: -1.29, z: 1.32}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0

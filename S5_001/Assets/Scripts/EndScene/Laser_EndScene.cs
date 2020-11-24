@@ -45,14 +45,14 @@ public class Laser_EndScene : MonoBehaviour, IPooledObject
 
     }
 
-    void OnCollisionEnter(Collision col)
+    /*void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "IgnoreLowOrbit")
         {
             //Physics.IgnoreCollision(col.gameObject.GetComponent<Collider>(), GetComponent<Collider>());
             Physics.IgnoreCollision(GetComponent<Collider>(), col.gameObject.GetComponent<Collider>());
         }
-    }
+    }*/
 
 
     void OnParticleCollision(GameObject other)

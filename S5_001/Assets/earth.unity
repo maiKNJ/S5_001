@@ -1403,7 +1403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transistion: {fileID: 1293077197}
-  transTime: 30
+  transTime: 100
   outroTime: 3
   audioclip: {fileID: 0}
 --- !u!1 &1026395008

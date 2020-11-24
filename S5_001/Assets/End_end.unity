@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.065, z: 0}
+  r: {x: 0, y: 0.0065, z: 0}
 --- !u!4 &32556007
 Transform:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.0364, z: 0}
+  r: {x: 0, y: 0.00364, z: 0}
 --- !u!4 &160605812
 Transform:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.0456, z: 0}
+  r: {x: 0, y: 0.00456, z: 0}
 --- !u!4 &444450799
 Transform:
   m_ObjectHideFlags: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.236, z: 0}
+  r: {x: 0, y: 0.0236, z: 0}
 --- !u!4 &452977383
 Transform:
   m_ObjectHideFlags: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.0878, z: 0}
+  r: {x: 0, y: 0.00878, z: 0}
 --- !u!4 &585143452
 Transform:
   m_ObjectHideFlags: 0
@@ -492,6 +492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Earth
+      objectReference: {fileID: 0}
+    - target: {fileID: 6193449371770048146, guid: bfb1e6f50d1387f49bf57d0725f10185,
+        type: 3}
+      propertyPath: r.y
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6193449371770048149, guid: bfb1e6f50d1387f49bf57d0725f10185,
         type: 3}
@@ -608,6 +613,8 @@ PlayableDirector:
     value: {fileID: 909911567}
   - key: {fileID: -5039165429042018215, guid: e15c2da40a0902e4c856a5eb8b0047fa, type: 2}
     value: {fileID: 1571437163}
+  - key: {fileID: -2852947888100861384, guid: e15c2da40a0902e4c856a5eb8b0047fa, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - b2782b3798a21464db62072c53f61a0a: {fileID: 0}
@@ -1596,7 +1603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.318, z: 0}
+  r: {x: 0, y: 0.0318, z: 0}
 --- !u!4 &1413329265
 Transform:
   m_ObjectHideFlags: 0
@@ -1656,7 +1663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.0343, z: 0}
+  r: {x: 0, y: 0.00343, z: 0}
 --- !u!4 &1483396434 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8562519939303034397, guid: 7b225edea3240084a957c148b8f0cfe7,
@@ -1908,7 +1915,7 @@ PrefabInstance:
     - target: {fileID: 8562519939303034397, guid: 7b225edea3240084a957c148b8f0cfe7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 136.3
+      value: 143.8
       objectReference: {fileID: 0}
     - target: {fileID: 8562519939303034397, guid: 7b225edea3240084a957c148b8f0cfe7,
         type: 3}
@@ -2174,7 +2181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.2, z: 0}
+  r: {x: 0, y: 0.02, z: 0}
 --- !u!1001 &1980099407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2273,7 +2280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.1616, z: 0}
+  r: {x: 0, y: 0.01616, z: 0}
 --- !u!4 &1987632017
 Transform:
   m_ObjectHideFlags: 0

@@ -641,7 +641,7 @@ MonoBehaviour:
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
     m_BlendInDuration: -1
-    m_BlendOutDuration: 7.962721088435375
+    m_BlendOutDuration: 10.179387755102042
     m_MixInCurve:
       serializedVersion: 2
       m_Curve:
@@ -701,7 +701,7 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: CM vcam1
   - m_Version: 1
-    m_Start: 15.15
+    m_Start: 12.933333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 443153598551589131}
     m_Duration: 34.71666666666667
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_ParentTrack: {fileID: -1948944736925236086}
     m_EaseInDuration: 0
     m_EaseOutDuration: 0
-    m_BlendInDuration: 7.962721088435375
+    m_BlendInDuration: 10.179387755102042
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}

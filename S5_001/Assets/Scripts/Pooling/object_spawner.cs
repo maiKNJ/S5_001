@@ -20,6 +20,7 @@ public class object_spawner : MonoBehaviour
 
     private double timer;
     private int objects = 0;
+    private int objects1 = 0;
    // public Collider IgnoreCollision;
     //public Collider objectForCollision;
     void Start()
@@ -86,6 +87,16 @@ public class object_spawner : MonoBehaviour
 
             }
 
+            if (SceneManager.GetActiveScene().name == "Cutscene3")
+            {
+                if (timer < Time.time)
+                {
+                    poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                    timer = Time.time + 0.7;
+                    Debug.Log("shoot");
+                }
+            }
+
             if (SceneManager.GetActiveScene().name == "C4")
             {
                 poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
@@ -136,6 +147,16 @@ public class object_spawner : MonoBehaviour
 
             }
 
+            if (SceneManager.GetActiveScene().name == "Cutscene3")
+            {
+                if (timer < Time.time )
+                {
+                    poolManager.spawnFromPool("Sat", transform.position, Quaternion.identity);
+                    timer = Time.time + 0.7;
+                    Debug.Log("shoot2");
+                }
+            }
+
             if (SceneManager.GetActiveScene().name == "C4")
             {
                 poolManager.spawnFromPool("lines", transform.position, Quaternion.identity);
@@ -180,7 +201,7 @@ public class object_spawner : MonoBehaviour
 
     private void OnEnable()
     {
-        if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+        if (SceneManager.GetActiveScene().name == "Rocket_Launch"  )
         {
             //if (timer < Time.time)
             //{
@@ -190,6 +211,11 @@ public class object_spawner : MonoBehaviour
 
             //}
 
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cutscene3")
+        {
+            objects1 += 1;
         }
     }
 }

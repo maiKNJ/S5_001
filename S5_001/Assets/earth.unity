@@ -2574,7 +2574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a49d35809e2eb194c8b3fe2168d51279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  r: {x: 0, y: 0.5, z: 0}
+  r: {x: 0, y: 0.02, z: 0}
 --- !u!1818360609 &1575660717
 RotationConstraint:
   m_ObjectHideFlags: 0

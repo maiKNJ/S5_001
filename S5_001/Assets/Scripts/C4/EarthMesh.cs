@@ -13,7 +13,7 @@ public class EarthMesh : MonoBehaviour
 
     private void Start()
     {
-        timer = Time.time + 3;
+        timer = Time.time + 1;
     }
 
     void Update()

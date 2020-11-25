@@ -66,6 +66,15 @@ public class TimeSceneChange : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        if (SceneManager.GetActiveScene().name == "C4")
+        {
+            transistion.SetTrigger("start");
+            SceneManager.LoadScene("End_Scene", LoadSceneMode.Single);
+        }
+    }
+
     //NOT USING THE CODE BELOW!
     public void NewScene()
     {

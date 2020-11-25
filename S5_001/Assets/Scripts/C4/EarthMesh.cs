@@ -18,11 +18,14 @@ public class EarthMesh : MonoBehaviour
 
     void Update()
     {
-        if (timer < Time.time)
-        {
-            createEdgeLineOnModel();
-        }
+        createEdgeLineOnModel();
     }
+    //{
+        //if (timer < Time.time)
+        //{
+            
+        //}
+    //}
 
     
 

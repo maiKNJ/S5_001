@@ -30,12 +30,17 @@ public class ColorChange : MonoBehaviour
             
 
             psmain.startColor = Color.red;
-            Destroy(earth.transform.GetChild(1).gameObject,0.008f);
-            Destroy(earth.transform.GetChild(2).gameObject, 0.008f);
-            Destroy(earth.transform.GetChild(3).gameObject, 0.008f);
+           /* if ( earth.transform.GetChild(3).gameObject != null)
+            {
+                Destroy(earth.transform.GetChild(1).gameObject, 0.008f);
+                Destroy(earth.transform.GetChild(2).gameObject, 0.008f);
+                Destroy(earth.transform.GetChild(3).gameObject, 0.008f);
+                Debug.Log("red");
+            }*/
             //Debug.Log("red");
 
         }
+        
         if (time > timer+20)
         {
             //Debug.Log("green");

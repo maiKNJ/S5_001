@@ -10,6 +10,7 @@ public class TimeSceneChange : MonoBehaviour
 
     private float timer = 0.0f;
     private float waitTime = 9000;
+    private float ftimer;
 
     public Animator transistion;
     public float transTime = 10f;
@@ -24,7 +25,8 @@ public class TimeSceneChange : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        ftimer = Time.time;
+        Debug.Log("time" + ftimer);
         /* timer += Time.frameCount;
          Debug.Log("time" + timer);
 
@@ -38,7 +40,7 @@ public class TimeSceneChange : MonoBehaviour
              transistion.SetTrigger("start");
          }
         */
-        
+
         if (Time.time >= transTime)
         {
             transistion.SetTrigger("start");
@@ -62,19 +64,57 @@ public class TimeSceneChange : MonoBehaviour
                 SceneManager.LoadScene("End_end", LoadSceneMode.Single);
             }
 
+
+            if (SceneManager.GetActiveScene().name == "C4")
+            {
+                //Debug.Log("time" + ftimer);
+                //transistion.SetTrigger("start");
+                //if (ftimer >= 70)
+                //{
+                   // Debug.Log("scene change");
+
+                    SceneManager.LoadScene("End_Scene", LoadSceneMode.Single);
+                //}
+
+                //StartCoroutine(change());
+
+
+            }
         }
 
     }
 
-    private void OnEnable()
+   /* private void OnEnable()
     {
         if (SceneManager.GetActiveScene().name == "C4")
         {
+            Debug.Log("time" + ftimer);
             transistion.SetTrigger("start");
-            SceneManager.LoadScene("End_Scene", LoadSceneMode.Single);
-        }
-    }
+            if (ftimer >= 70)
+            {
+                Debug.Log("scene change");
+                
+                SceneManager.LoadScene("End_Scene", LoadSceneMode.Single);
+            }
+            
+            //StartCoroutine(change());
+            
 
+        }
+    }*/
+
+    
+    IEnumerator change()
+    {
+        transistion.SetTrigger("start");
+
+        yield return new WaitForSeconds(0.0001f);
+
+        SceneManager.LoadScene("End_Scene", LoadSceneMode.Single);
+       
+
+    }
+    
     //NOT USING THE CODE BELOW!
     public void NewScene()
     {

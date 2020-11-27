@@ -160,10 +160,10 @@ MonoBehaviour:
   - tag: FirstOrbit
     prefab: {fileID: 6095852555684197494, guid: 1fc2ad6da6b9e5545b42052ed772303b,
       type: 3}
-    size: 10
+    size: 25
   - tag: SecondOrbit
     prefab: {fileID: 552895466974678781, guid: b5716f9b282097349952aa653fb65372, type: 3}
-    size: 10
+    size: 25
 --- !u!4 &29773357
 Transform:
   m_ObjectHideFlags: 0

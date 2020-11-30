@@ -11,10 +11,10 @@ public class EarthMesh : MonoBehaviour
     //double timer;
     //public LineRenderer line2;
 
-    private void Start()
+    /*private void Start()
     {
        // timer = Time.time + 1;
-    }
+    }*/
 
     void Update()
     {

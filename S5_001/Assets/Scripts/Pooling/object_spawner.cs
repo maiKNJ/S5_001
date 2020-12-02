@@ -14,15 +14,17 @@ public class object_spawner : MonoBehaviour
     public GameObject LaserBeamOrigin;
     public AudioSource soundfx;
 
-    private bool soundInput = false; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
+    private bool soundInput = true; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
     bool fire = false;
     bool fireSecond = false;
 
     private double timer;
     private int objects = 0;
     private int objects1 = 0;
-   // public Collider IgnoreCollision;
+    // public Collider IgnoreCollision;
     //public Collider objectForCollision;
+    public static int numOfSat; // used in explosion for counting when to explode.
+
     void Start()
     {
         poolManager = PoolManager.Instance;
@@ -32,6 +34,8 @@ public class object_spawner : MonoBehaviour
         //   Physics.IgnoreCollision(IgnoreCollision, objectForCollision, true);
 
         timer = Time.time + 0.5;
+
+        numOfSat = 0;
     }
 
 
@@ -51,11 +55,14 @@ public class object_spawner : MonoBehaviour
                 {
                     //Debug.Log("check " + realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux());
                     poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
+                    numOfSat++;
                 }
                 if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
                 {
                     poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
+                    numOfSat++;
                 }
+                //Debug.Log("numOfSat = " + numOfSat);
             }
 
             if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
@@ -111,12 +118,14 @@ public class object_spawner : MonoBehaviour
                 {
                     Debug.Log("inside fire");
                     poolManager.spawnFromPool("FirstOrbit", transform.position, Quaternion.identity);
+                    numOfSat++;
                     fire = false;
                 }
 
                 if (fireSecond == true)
                 {
                     poolManager.spawnFromPool("SecondOrbit", transform.position, Quaternion.identity);
+                    numOfSat++;
                     fireSecond = false;
                 }
             }

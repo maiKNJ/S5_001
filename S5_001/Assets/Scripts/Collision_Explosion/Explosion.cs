@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class Explosion : MonoBehaviour
 {
-    
     public GameObject explosion;
     public Vector3 explosionOffset;
 
@@ -17,12 +16,18 @@ public class Explosion : MonoBehaviour
     public GameObject originalObject;
     public AudioSource soundfx;
 
+    private Collider m_Collider;
+    public float timeBeforeExpl;
 
+    public Transform earth;
 
 
     public void Start()
     {
         soundfx = Instantiate(soundfx);
+        m_Collider = GetComponent<Collider>();
+        m_Collider.enabled = !m_Collider.enabled;
+       // Debug.Log("Collider.enabled in start = " + m_Collider.enabled);
     }
 
     public void Explode()
@@ -58,8 +63,17 @@ public class Explosion : MonoBehaviour
 
             }
         }*/
-        
+        //Debug.Log("time is " + Time.time);
+        float dist = Vector3.Distance(earth.position, transform.position);
+        //Debug.Log("Distance " + dist);
 
+        if (object_spawner.numOfSat >= 46 && dist >= 5)//Time.time >= timeBeforeExpl)
+        {
+            m_Collider.enabled = !m_Collider.enabled;
+            //Debug.Log("Collider.enabled in update = " + m_Collider.enabled);
+        }
+
+        
     }
 
     void OnCollisionEnter(Collision col)

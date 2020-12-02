@@ -261,6 +261,8 @@ MonoBehaviour:
   radius: 40
   originalObject: {fileID: 552895466974678781}
   soundfx: {fileID: 258236026305693421, guid: a050a3ef30d81a44fb28d39b614c63fc, type: 3}
+  timeBeforeExpl: 0
+  earth: {fileID: 8445494755756148397, guid: c1310506be6494446b31ef11b592b6c5, type: 3}
 --- !u!1 &829861609262130624
 GameObject:
   m_ObjectHideFlags: 0

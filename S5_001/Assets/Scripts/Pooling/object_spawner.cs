@@ -14,7 +14,7 @@ public class object_spawner : MonoBehaviour
     public GameObject LaserBeamOrigin;
     public AudioSource soundfx;
 
-    private bool soundInput = true; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
+    private bool soundInput = false; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
     bool fire = false;
     bool fireSecond = false;
 
@@ -61,7 +61,7 @@ public class object_spawner : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "End_Scene") //last game scene
             {
 
-                if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.04 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
+                if (realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() > 0.02 && realTimeSpectralFluxAnalyzer.calculateRectifiedSpectralFlux() < 0.06)
                 {
                     poolManager.spawnFromPool("Laser", LaserBeamOrigin.transform.position, LaserBeamOrigin.transform.rotation);
                     soundfx.Play();

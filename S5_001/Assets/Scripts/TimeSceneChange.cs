@@ -64,6 +64,10 @@ public class TimeSceneChange : MonoBehaviour
                 SceneManager.LoadScene("End_end", LoadSceneMode.Single);
             }
 
+            if (SceneManager.GetActiveScene().name == "Rocket_Launch")
+            {
+                SceneManager.LoadScene("Cutscene3", LoadSceneMode.Single);
+            }
 
             if (SceneManager.GetActiveScene().name == "Cutscene3")
             {

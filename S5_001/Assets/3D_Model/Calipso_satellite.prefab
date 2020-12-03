@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 552895466974678781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 61.443676, y: -41.03337, z: 62.529434}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 7538597061832059877}
   - {fileID: 1240472516534561801}
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range1: -1
   range2: 1
-  speed: 6
+  speed: 0.02
   orbit: {fileID: 5178117580944081119, guid: 5c024d72b75b7024cade206c5739e3dc, type: 3}
   Center: {fileID: 6193449371770048149, guid: bfb1e6f50d1387f49bf57d0725f10185, type: 3}
   Axis: {x: 0, y: 1, z: 0}

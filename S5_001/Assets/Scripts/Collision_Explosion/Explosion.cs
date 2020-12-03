@@ -65,9 +65,9 @@ public class Explosion : MonoBehaviour
         }*/
         //Debug.Log("time is " + Time.time);
         float dist = Vector3.Distance(earth.position, transform.position);
-        //Debug.Log("Distance " + dist);
+        //Debug.Log("Distance = " + dist);
 
-        if (object_spawner.numOfSat >= 46 && dist >= 5)//Time.time >= timeBeforeExpl)
+        if (object_spawner.numOfSat >= 46 && dist >= 6)//Time.time >= timeBeforeExpl)
         {
             m_Collider.enabled = !m_Collider.enabled;
             //Debug.Log("Collider.enabled in update = " + m_Collider.enabled);

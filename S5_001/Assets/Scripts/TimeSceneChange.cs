@@ -65,6 +65,12 @@ public class TimeSceneChange : MonoBehaviour
             }
 
 
+            if (SceneManager.GetActiveScene().name == "Cutscene3")
+            {
+                SceneManager.LoadScene("C4", LoadSceneMode.Single);
+            }
+
+
             if (SceneManager.GetActiveScene().name == "C4")
             {
                 //Debug.Log("time" + ftimer);

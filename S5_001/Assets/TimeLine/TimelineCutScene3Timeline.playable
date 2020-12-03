@@ -45,10 +45,10 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 9.116666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 6645882087634242850}
-    m_Duration: 20.666666666666668
+    m_Duration: 24.066666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -7423618000572847627}
     m_EaseInDuration: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
     m_PostExtrapolationTime: Infinity
-    m_PreExtrapolationTime: 0
+    m_PreExtrapolationTime: 9.116666666666667
     m_DisplayName: brokenSatelitte
   m_Markers:
     m_Objects: []
@@ -698,7 +698,7 @@ MonoBehaviour:
     m_Start: 13.166666666666666
     m_ClipIn: 0
     m_Asset: {fileID: 6486441237155985171}
-    m_Duration: 17.866666666666667
+    m_Duration: 21.66666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: -3824185663453970807}
     m_EaseInDuration: 0
@@ -900,7 +900,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 11.516666666666667
     m_Asset: {fileID: 8880473274833870152}
-    m_Duration: 30.65
+    m_Duration: 34.833333333333336
     m_TimeScale: 1
     m_ParentTrack: {fileID: -2827064355966546573}
     m_EaseInDuration: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 0
+    m_Start: 2.466666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -3106574039466151350}
     m_Duration: 29.41387755102041
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -1256,7 +1256,7 @@ MonoBehaviour:
     m_Start: 10.616666666666667
     m_ClipIn: 0
     m_Asset: {fileID: -4398032841995078216}
-    m_Duration: 20.216666666666654
+    m_Duration: 24.21666666666667
     m_TimeScale: 1
     m_ParentTrack: {fileID: 479150934076404395}
     m_EaseInDuration: 0

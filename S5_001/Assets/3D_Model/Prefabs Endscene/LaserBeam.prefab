@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f258bc8709272444a15df7d7e127cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 20
   LaserBeamOrigin: {fileID: 759889177170765208, guid: 1f5c5ec17d081ed4aaa5b24fbd9532fe,
     type: 3}
   particles: {fileID: 5079757250782075100, guid: 4da61e59f0b7e224eb22e5042c76f109,

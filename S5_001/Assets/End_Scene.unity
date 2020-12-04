@@ -1567,7 +1567,7 @@ MonoBehaviour:
   - tag: Laser
     prefab: {fileID: 1893690626085225704, guid: acc861c64aeb6144ebc72bc16e5450f1,
       type: 3}
-    size: 5
+    size: 10
   - tag: Satellite
     prefab: {fileID: 6095852555684197494, guid: 1fc2ad6da6b9e5545b42052ed772303b,
       type: 3}
@@ -1656,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 4981946938279753279, guid: 62b91010429ffe84c87118abbc3a5412,
         type: 3}
       propertyPath: m_Intensity
-      value: 3.5
+      value: 3.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62b91010429ffe84c87118abbc3a5412, type: 3}
@@ -1745,7 +1745,7 @@ PrefabInstance:
     - target: {fileID: 7796234682272874320, guid: b5401f2467f327741a39b6f11faf1033,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7796234682272874320, guid: b5401f2467f327741a39b6f11faf1033,
         type: 3}

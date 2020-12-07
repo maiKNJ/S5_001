@@ -16,7 +16,11 @@ public class StartFilm : MonoBehaviour
     {
         if (Input.GetKeyDown("s"))
         {
-            SceneManager.LoadScene("IntroScene", LoadSceneMode.Single);
+            Time.timeScale = 0;
+        }
+        else if (Input.GetKeyDown("p"))
+        {
+            Time.timeScale = 1;
         }
     }
 }

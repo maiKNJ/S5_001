@@ -14,7 +14,7 @@ public class object_spawner : MonoBehaviour
     public GameObject LaserBeamOrigin;
     public AudioSource soundfx;
 
-    private bool soundInput = false; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
+    private bool soundInput = true; //CHANGE THIS WHEN SHIFTING BETWEEN SOUND AND KEY INPUT
     bool fire = false;
     bool fireSecond = false;
 

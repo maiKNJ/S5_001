@@ -15,3 +15,4 @@ to: `private bool soundInput = false;`.
 
 ### Running the program
 The movie can either be played in game mode or it can be build, and run through this.
+If the movie is played through game mode, be sure to start it from the scene "IntroScene" (Assets -> Scenes -> IntroScene).
